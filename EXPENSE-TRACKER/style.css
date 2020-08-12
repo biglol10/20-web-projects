@@ -142,6 +142,9 @@ input[type='text'], input[type='number']{
     transform: translate(-100%, -50%);
     opacity: 0;
     transition: opacity 0.3s ease;
+    /*relative가 static인 상태를 기준으로 주어진 픽셀만큼 움직였다면, absolute는 position: static 속성을 가지고 있지 않은 부모를 기준으로 움직입니다. 
+    만약 부모 중에 포지션이 relative, absolute, fixed인 태그가 없다면 가장 위의 태그(body)가 기준이 됩니다.
+    참고로 absolute가 되면 div여도 더는 width: 100%가 아닙니다.*/
 }
 
 .list li:hover .delete-btn{
