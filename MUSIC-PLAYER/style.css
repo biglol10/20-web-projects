@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(
+        0deg,
+        rgba(247,247,247,1) 23.8%,
+        rgba(252,221,221,1) 92%
+    );
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    margin:0;
+}
+
+.music-container{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px 0 rgba(252, 1169, 169, 0.6);
+    display: flex;
+    padding: 20px 30px;
+    position: relative;
+    margin: 100px 0;
+    z-index: 10;
+}
+
+.img-container{
+    position: relative;
+    width:110px;
+}
+
+.img-container::after{
+    /* ::before와 ::after를 쓸 땐 content라는 속성이 꼭 필요하다고 합니다! 
+    ::before와 ::after와 꼭 함께 쓰이는 ‘content’는 ‘가짜’ 속성입니다.
+    HTML 문서에 정보로 포함되지 않은 요소를 CSS에서 새롭게 생성시켜주기 때문이죠!
+    대표적으로 사용하는 속성: normal, string, image, counter, none, attr
+    .test li::after { padding-left: 5px; content: "|" }
+    .test li:last-child::after { content: "|" }
+     li에 after와 content를 사용하여 바(|)를 선언 후, last-child를 이용하여 마지막 li의 content를 재선언 해줍니다.
+    */
+    content: 'wqerqwkltjhqweltkjqwl;tkjqwkltjqwlktj;lkj';
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, 50%);
+}
+
+.img-container img{
+    border-radius: 50%;
+    object-fit: cover; 
+    /*object-fit 속성은 대체되는 요소의 내용(<img>, <video>, <object>, <svg> 등과 같은)이 
+    지정된 너비와 높이에 맞게 장착되는 방식을 지정한다.
+    object-fit 속성은 대체되는 요소의 내용(<img>, <video>, <object>, <svg> 등과 같은)이 지정된 
+    너비와 높이에 맞게 장착되는 방식을 지정한다.
+    */
+    height: 110px;
+    width: inherit;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: rotate 3s linear infinite;
+}

@@ -13,8 +13,8 @@ body{
     background-color: #f9fafb;
     font-family: 'Open Sans', sans-serif;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;       /* 를 이용하여 교차축의 중앙에 정렬 */
+    justify-content: center;  /* justify-content 를 이용하여 items 들을 중심축의 중앙에 정렬 */
     min-height: 100vh;
     margin: 0;
 }
