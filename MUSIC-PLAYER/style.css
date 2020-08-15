@@ -44,7 +44,7 @@ body{
     .test li:last-child::after { content: "|" }
      li에 after와 content를 사용하여 바(|)를 선언 후, last-child를 이용하여 마지막 li의 content를 재선언 해줍니다.
     */
-    content: 'wqerqwkltjhqweltkjqwl;tkjqwkltjqwlktj;lkj';
+    content: '';
     background-color: #fff;
     border-radius: 50%;
     position: absolute;
@@ -128,4 +128,26 @@ body{
 
 .music-container.play .music-info{
     opacity: 1;
+    transform: translateY(-100%);
+}
+
+.music-info h4{
+    margin: 0;
+}
+
+.progress-container{
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+}
+
+.progress{
+    background-color: #fe8daa;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;  /* 외곽선 그리는 애니메이션*/
 }
